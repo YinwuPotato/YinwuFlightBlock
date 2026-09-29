@@ -1,0 +1,43 @@
+# ============================================================
+# YinwuFlightBlock 主配置
+# ============================================================
+
+enabled: true
+debug: false
+
+# 飞行方块使用的原版材质（Bukkit 无法注册自定义方块，用现有材质代替）
+block-material: LIGHT_BLUE_STAINED_GLASS
+
+# 方块生效范围（格，以方块为中心的立方体，每轴 ±range 与轮廓一致）
+range: 32
+
+# 飞行检查间隔（tick，20 = 1秒）
+check-interval: 20
+
+# 范围轮廓刷新间隔（tick）— 粒子寿命约 1 秒，设 ≤20 才能连续可见不闪烁
+outline-interval: 20
+
+# 范围轮廓描边步长（1 = 每条边逐格画粒子，调大减少粒子量）
+outline-step: 1
+
+# 范围轮廓粒子样式（DUST 较醒目；颜色 RRGGBB；大小控制粒子体积）
+outline-particle: DUST
+outline-particle-color: '87CEFA'
+outline-particle-size: 1.5
+
+# 是否注册合成配方（铁栏杆 A + 烟花火箭 B + 铁锭 C；ABA / CCC）
+recipe-enabled: true
+
+messages:
+  flight-enabled: '&a飞行能力已启用！'
+  flight-disabled: '&c飞行能力已禁用。'
+  range-toggle-on: '&e范围: %s，已开启显示范围，再次右键关闭！'
+  range-toggle-off: '&e范围: %s，已关闭范围显示。'
+  usage: '&c用法：/flightblock give <玩家> [数量] | list | remove [世界] <x> <y> <z> | reload'
+  player-not-found: '&c玩家 %s 不在线！'
+  give-success: '&a已给 %s %d 个飞行方块。'
+  world-not-found: '&c世界 %s 不存在！'
+  removed: '&a已移除飞行方块 (%s)。'
+  block-not-found: '&c该位置没有飞行方块。'
+  reloaded: '&a已重载配置。'
+  no-blocks: '&e当前没有任何已放置的飞行方块。'

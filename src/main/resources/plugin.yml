@@ -1,0 +1,22 @@
+name: ${project.name}
+version: '${project.version}'
+main: org.yinwu.flightblock.YinwuFlightBlockPlugin
+api-version: '1.21'
+description: 飞行方块：范围内非创造/非旁观玩家自动获得飞行能力（Folia 兼容）
+author: Qumingjam
+website: server.yinwurealm.org
+
+# Folia 兼容 - 使用区域线程调度
+folia-supported: true
+
+commands:
+  flightblock:
+    description: 飞行方块主命令
+    usage: /flightblock give <玩家> [数量] | list | remove [世界] <x> <y> <z> | reload
+    aliases: [fb]
+    permission: yinwu.flightblock.admin
+
+permissions:
+  yinwu.flightblock.admin:
+    description: 飞行方块管理权限
+    default: op
