@@ -61,3 +61,9 @@ mvn clean package
 > ```
 >
 > 父 POM（`net.yinwu:YinwuPlugins:1.0.1`）已随仓库提供在 `parent/pom.xml`，无需额外操作。
+
+---
+
+## License | 许可证
+
+LGPL-3.0 —— 见 [LICENSE](LICENSE)。
