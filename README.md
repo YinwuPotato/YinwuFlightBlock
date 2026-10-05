@@ -39,6 +39,12 @@ Folia 兼容的飞行方块插件（移植自 NeoForge mod [BBL-Flight-Blocks](h
 | `recipe-enabled` | `true` | 是否注册合成配方 |
 | `messages.*` | 中文 | 聊天消息 |
 
+## 依赖
+
+- **[YinwuPluginLib](https://github.com/YinwuPotato/YinwuPluginLib)**（**构建期**前置 —— 构建产物已把该库 shade 进 jar，服务器上**不需要**单独安装它）
+- **Paper API 1.21+**（provided）
+- **Folia**（兼容区域线程调度）
+
 ## 已知限制
 
 - **飞行能力是单一布尔**：若另一插件也 `setAllowFlight(true)`，本插件回收时会一并关闭（参考 mod 有同样限制）。
