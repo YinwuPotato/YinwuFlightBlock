@@ -47,7 +47,17 @@ Folia 兼容的飞行方块插件（移植自 NeoForge mod [BBL-Flight-Blocks](h
 ## 构建
 
 ```bash
-mvn -pl YinwuFlightBlock -am clean package
+mvn clean package
 ```
 
-产物：`YinwuFlightBlock/target/YinwuFlightBlock-1.0.0.jar`
+产物：`target/YinwuFlightBlock-1.0.0.jar`
+
+> **前置步骤（首次构建必需）**：本插件依赖共享库 `YinwuPluginLib`，而它不在 Maven 中央仓库。
+> 首次构建前先克隆并安装一次：
+>
+> ```bash
+> git clone https://github.com/YinwuPotato/YinwuPluginLib.git
+> cd YinwuPluginLib && mvn clean install
+> ```
+>
+> 父 POM（`net.yinwu:YinwuPlugins:1.0.1`）已随仓库提供在 `parent/pom.xml`，无需额外操作。
